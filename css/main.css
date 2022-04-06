@@ -319,10 +319,12 @@ textarea{
     margin: 10px 0;
     border: none;
     background: none;
-    border-bottom: 2px solid #141414;
+    outline: 0;
+    border-bottom: 2px solid #ccc;
     
-
 }
+
+
 textarea{
     min-width: 70%;
     max-width: 70%;
@@ -362,22 +364,35 @@ main form .female{
     border-radius: 2px 5px 5px 2px;
 }
 
-main form input[type="submit"]{
+.btn-form{
+    display: inline-flex;
     background-color: #141414;
+    align-items: center;
+    justify-content: center;
     color: #fff;
-    padding: 15px 40px;
-    margin: 15px 0;
+    height: 50px;
+    width: 10%;
+    margin: 15px 0 ;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: .3s ease all;
+    position: relative;
+    overflow: hidden;
+
 }
 
-/* main form input[type="submit"]::after{
+.btn-form span{
+    position: relative;
+    z-index: 2;
+    transform: .3s ease all;
+}
+
+.btn-form::after{
     content: "";
     width: 100%;
     height: 100%;
-    background: #833ab4;
+    background: #7F3FBF;
     position: absolute;
     z-index: 1;
     top: -80px;
@@ -385,11 +400,17 @@ main form input[type="submit"]{
     transition: .3s ease-in-out all;
 }
 
-main form input[type="submit"]:hover::after{
+.btn-form:hover::after{
     top: 0;
-} */
+}
 
-/* ESTOY TRABAJANDO EN UNA ANIMACION PARA LOS BOTONES QUE VI HAHAHA */
+.btn-form.sign{
+    width: 15%;
+}
+
+
+
+
 
 .main-login-p > a{
     color: #7F3FBF;
@@ -397,11 +418,7 @@ main form input[type="submit"]:hover::after{
 
 .main-login-p > a:hover{text-decoration: underline;}
 
-
-
-
-/* 
-
+/*
 ------------- FOOTER ----------------------
 
 */
