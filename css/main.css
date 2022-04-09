@@ -291,9 +291,6 @@ article{
 
 
 */
-.main-signup-form{
-    margin-top: 10%;
-}
 
 .main-signup-form,
 .main-login-form,
@@ -308,6 +305,9 @@ article{
     border-radius: 25px;
 }
 
+.main-signup-form{
+    margin-top: 10%;
+}
 
 
 main form input[type="text"],
@@ -470,6 +470,10 @@ footer{
     .productBG{
         display: none;
     }
+
+    .btn-form.sign, .btn-form{
+        width: 40%;
+    }
 }
 
 @media (max-width: 842px) {
@@ -524,6 +528,8 @@ footer{
         border-radius: 10px;
          
      }
+
+   
 }
 
 @media (max-width: 556px) {
