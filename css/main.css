@@ -22,6 +22,27 @@ h2{
     font-weight: bold;
 }
 
+.img-mobile{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+}
+
+.i-mobile{
+    background-image: url('../assets/try5.jpg');
+}
+.a-mobile{
+    background-image: url('../assets/try6.jpg');
+}
+.c-mobile{
+    background-image: url('../assets/try8.jpg');
+}
+.p-mobile{
+    background-image: url('../assets/try7.jpg');
+}
+
 .menu-nav-forms,
 .menu-nav{
     max-width: 100%;
@@ -44,9 +65,17 @@ h2{
     text-decoration: underline;
 }
 
-.img-slideshow{
-    background: #a147ed;
+.carousel-item{
+    width: 100%;
+    max-height: 600px;
 }
+
+.carousel-indicators [data-bs-target]{
+    background-color: #000;
+}
+
+
+
 
 .header-cont{
     height: 450px;
@@ -59,15 +88,14 @@ h2{
 }
 
 
-
 .btn-menu{
     display: inline-flex;
-    background-color: #141414;
+    background-color: #000;
     align-items: center;
     justify-content: center;
     color: #fff;
     height: 50px;
-    width: 15%;
+    width: 150px;
     margin: 15px 0 ;
     border: none;
     border-radius: 6px;
@@ -108,6 +136,22 @@ h2{
     opacity: 1;
 
 }
+
+.menu-p{
+    color: #fff;
+}
+
+.menu-p-mobile{
+    color: #fff;
+}
+
+.menu-p-mobile-cu{
+    color: #fff;
+    font-size: 19px;
+    font-weight: bold;
+    
+}
+
 .p-menu{
     margin-top: 15px;
     font-weight: bold;
@@ -116,7 +160,7 @@ h2{
 }
 
 .p-menu:hover{
-    color: #fff;
+    color: #7300ff;
     
 }
 
@@ -168,9 +212,6 @@ article{
     width: 100%;
     border-top: 1px  solid #000;
     border-bottom: 1px  solid #000;
-}
-.main-products{
-    padding: 12px;
 }
 .main-grid{
     margin: 40px;
@@ -352,7 +393,7 @@ main form .female{
     justify-content: center;
     color: #fff;
     height: 50px;
-    width: 20%;
+    width: 100px;
     margin: 15px 0 ;
     border: none;
     border-radius: 6px;
@@ -385,9 +426,7 @@ main form .female{
     top: 0;
 }
 
-.btn-form.sign{
-    width: 15%;
-}
+
 
 
 
@@ -399,6 +438,12 @@ main form .female{
 
 .main-login-p > a:hover{text-decoration: underline;}
 
+.signup-p > a{
+    color: #7F3FBF;
+}
+
+.signup-p > a:hover{text-decoration: underline;}
+
 
 /* 
 
@@ -408,14 +453,9 @@ main form .female{
 
 */
 
-
-.products-main{
+.main-products{
     background: #f2f2f2;
-    padding: 100px;
 }
-
-
-
 
 
 
@@ -478,6 +518,7 @@ footer{
         grid-template-columns: 200px 200px;
         grid-template-rows: 50px repeat(2, 200px) 50px;
         justify-content: center;
+        min-width: 350px;
         
     }
     .products-tittle{
@@ -531,7 +572,27 @@ footer{
    .header-logo{
        display: none;
    }
-   header nav ul{
+  
+   .main-grid{
+       margin: 0 auto;
+       grid-template-columns: 340px;
+       grid-template-rows: 50px 340px 50px;
        justify-content: center;
+       
+   }
+   .p1{
+       display: block;
+       grid-column: 1 / 2;
+       grid-row: 2 / 3;
+       width: 100%;
+   }
+   .p2, .p3, .p4, .p5{
+       display: none;
+   }
+
+   .a-grid{
+       grid-column: 1 / 2;
+       grid-row: 3 / 4;
+       margin: 0 auto;
    }
 }
