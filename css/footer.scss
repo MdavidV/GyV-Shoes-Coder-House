@@ -1,0 +1,46 @@
+footer {
+    background: #141414;
+    color: #fff;
+    padding: 30px;
+    width: 100%;
+}
+
+.footer-fixed {
+    position: absolute;
+    bottom: 0;
+}
+
+.social-media-footer {
+    width: 100%;
+
+    >a {
+        color: #fff;
+        width: 100px;
+        display: inline-block;
+        padding: 15px 0;
+        border-radius: 3px;
+        font-size: 30px;
+        margin: 0 20px;
+        text-align: center;
+    }
+
+    .twitter:hover {
+        background: #1da1f2;
+    }
+
+    .youtube:hover {
+        background: #ff0000;
+    }
+
+    .facebook:hover {
+        background: #1877f2;
+    }
+
+    .instagram:hover {
+        background: #833ab4;
+    }
+
+    .github:hover {
+        background: #666;
+    }
+}
