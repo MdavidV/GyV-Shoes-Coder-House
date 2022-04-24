@@ -93,8 +93,7 @@ main form {
     align-items: center;
     justify-content: center;
     color: #fff;
-    height: 50px;
-    width: 100px;
+    @include width-btn;
     margin: 15px 0;
     border: none;
     border-radius: 6px;

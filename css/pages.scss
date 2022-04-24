@@ -25,19 +25,19 @@ article {
 
 .main-anchor {
     display: block;
-    border: 1px solid #7F3FBF;
+    border: 1px solid map-get($colors-btn, light );
     border-radius: 8px;
-    color: #7F3FBF;
-    width: 150px;
+    color: map-get($colors-btn, light );
+    @include width-btn;
     text-align: center;
     margin: 10px auto;
     transition: .2s ease-in all;
 
     &:hover {
         font-size: 24px;
-        border: 1px solid #fff;
-        color: #fff;
-        background-color: #7F3FBF;
+        border: 1px solid map-get($colors-btn, bg-light);
+        color: map-get($colors-btn, bg-light );
+        background-color: map-get($colors-btn, light);
     }
 }
 

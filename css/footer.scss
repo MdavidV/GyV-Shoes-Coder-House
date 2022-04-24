@@ -23,24 +23,12 @@ footer {
         margin: 0 20px;
         text-align: center;
     }
+}
 
-    .twitter:hover {
-        background: #1da1f2;
-    }
-
-    .youtube:hover {
-        background: #ff0000;
-    }
-
-    .facebook:hover {
-        background: #1877f2;
-    }
-
-    .instagram:hover {
-        background: #833ab4;
-    }
-
-    .github:hover {
-        background: #666;
+@each $red, $color in $redes{
+    .red--#{$red} {
+        &:hover{
+            background: $color;
+        }
     }
 }
