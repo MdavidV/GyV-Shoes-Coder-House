@@ -1,0 +1,78 @@
+$font-stack: "Bebas Neue", Arial;
+$Black: #000;
+$First-Color: #f7f7f7;
+$White: #ffff;
+
+header{
+  width: 100%;
+  .header-nav{
+    height: 100px;
+    background-color: $First-Color;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    nav{
+      display: flex;
+      a{
+        margin: 25px;
+      }
+    }
+    .logo{
+      width: 100px;
+      justify-self: center;
+      img{
+        width: 100%; 
+      }
+    }
+    .cart-icon-header{
+      width: 100px;
+      justify-self: end;
+      i{
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .header-main{
+    background-image: url('../../assets/bg.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 853px;
+    color: $White;
+    margin-top: -39px;
+    text-align: left;
+    .text-header-main{
+      position: relative;
+      top: 18%;
+      left: 19%;
+      h1{
+        font-size: 120px;
+      }
+      p{
+        font-size: 26px;
+      }
+    }
+
+    .btn-header{
+      position: relative;
+      top: 22%;
+      left: 19%; 
+      width: 200px;
+      border: 1px solid $White;
+      a{
+        color: $White;
+        display: block;
+        padding: 10px 20px;
+        text-align: center;
+        transition: all .3s;
+        &:hover{
+          background-color: $First-Color;
+          color: $Black;
+        }
+      }
+    }
+  }
+}

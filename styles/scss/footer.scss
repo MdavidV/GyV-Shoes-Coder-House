@@ -1,0 +1,116 @@
+footer {
+  width: 100%;
+  .contact-footer {
+    margin-top: 150px;
+    text-align: center;
+    .contact-text {
+      h2 {
+        font-size: 64px;
+      }
+
+      p {
+        font-size: 32px;
+      }
+    }
+
+    .contact-form {
+      position: relative;
+      padding: 25px 0;
+      label {
+        padding: 0 10px;
+        background-color: #fff;
+        color: #131313;
+        position: absolute;
+        top: 50%;
+        left: 31%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        font-size: 20px;
+        transition: all 0.3s;
+      }
+
+      input {
+        padding: 18px 15px;
+        width: 40%;
+        border: 3px solid #131313;
+        outline: none;
+        font-size: 16px;
+        background-color: transparent;
+        color: #000;
+        border-radius: 10px;
+      }
+    }
+    .contact-form input:focus + label,
+    .contact-form:not(:placeholder-shown) + label {
+      top: 23%;
+      font-size: 18px;
+    }
+
+    .btn-submit {
+      height: 50px;
+      width: 250px;
+      background: transparent;
+      border: 3px solid #131313;
+      color: #131313;
+      font-size: 18px;
+      margin-top: 25px;
+      cursor: pointer;
+      position: relative;
+        
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: inherit;
+        transition: 0.5s ease;
+      }
+
+      &::before {
+        left: -15px;
+        top: -15px;
+        border-width: 3px 0 0 3px;
+      }
+
+      &::after {
+        right: -15px;
+        bottom: -15px;
+        border-width: 0 3px 3px 0;
+      }
+
+
+      &:hover{
+        &::after,
+        &::before {
+          width: calc(100% + 27px);
+          height: calc(100% + 27px);
+        }
+      }
+  
+    }
+  }
+
+
+  .footer-media{
+    width: 100%;
+    margin-top: 45px;
+    background-color: #131313;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo-footer{
+        width: 100px;
+        img{
+            width: 100%;
+        }
+    }
+  }
+}
+
+
+.footer-fixed{
+    position: relative;
+    bottom: 0;
+}

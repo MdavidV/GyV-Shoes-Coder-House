@@ -1,0 +1,308 @@
+header {
+  width: 100%; }
+  header .header-nav {
+    height: 100px;
+    background-color: #f7f7f7;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center; }
+    header .header-nav nav {
+      display: flex; }
+      header .header-nav nav a {
+        margin: 25px; }
+    header .header-nav .logo {
+      width: 100px;
+      justify-self: center; }
+      header .header-nav .logo img {
+        width: 100%; }
+    header .header-nav .cart-icon-header {
+      width: 100px;
+      justify-self: end; }
+      header .header-nav .cart-icon-header i {
+        width: 100%;
+        cursor: pointer; }
+  header .header-main {
+    background-image: url("../../assets/bg.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 853px;
+    color: #ffff;
+    margin-top: -39px;
+    text-align: left; }
+    header .header-main .text-header-main {
+      position: relative;
+      top: 18%;
+      left: 19%; }
+      header .header-main .text-header-main h1 {
+        font-size: 120px; }
+      header .header-main .text-header-main p {
+        font-size: 26px; }
+    header .header-main .btn-header {
+      position: relative;
+      top: 22%;
+      left: 19%;
+      width: 200px;
+      border: 1px solid #ffff; }
+      header .header-main .btn-header a {
+        color: #ffff;
+        display: block;
+        padding: 10px 20px;
+        text-align: center;
+        transition: all .3s; }
+        header .header-main .btn-header a:hover {
+          background-color: #f7f7f7;
+          color: #000; }
+
+footer {
+  width: 100%; }
+  footer .contact-footer {
+    margin-top: 150px;
+    text-align: center; }
+    footer .contact-footer .contact-text h2 {
+      font-size: 64px; }
+    footer .contact-footer .contact-text p {
+      font-size: 32px; }
+    footer .contact-footer .contact-form {
+      position: relative;
+      padding: 25px 0; }
+      footer .contact-footer .contact-form label {
+        padding: 0 10px;
+        background-color: #fff;
+        color: #131313;
+        position: absolute;
+        top: 50%;
+        left: 31%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        font-size: 20px;
+        transition: all 0.3s; }
+      footer .contact-footer .contact-form input {
+        padding: 18px 15px;
+        width: 40%;
+        border: 3px solid #131313;
+        outline: none;
+        font-size: 16px;
+        background-color: transparent;
+        color: #000;
+        border-radius: 10px; }
+    footer .contact-footer .contact-form input:focus + label,
+    footer .contact-footer .contact-form:not(:placeholder-shown) + label {
+      top: 23%;
+      font-size: 18px; }
+    footer .contact-footer .btn-submit {
+      height: 50px;
+      width: 250px;
+      background: transparent;
+      border: 3px solid #131313;
+      color: #131313;
+      font-size: 18px;
+      margin-top: 25px;
+      cursor: pointer;
+      position: relative; }
+      footer .contact-footer .btn-submit::after, footer .contact-footer .btn-submit::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: inherit;
+        transition: 0.5s ease; }
+      footer .contact-footer .btn-submit::before {
+        left: -15px;
+        top: -15px;
+        border-width: 3px 0 0 3px; }
+      footer .contact-footer .btn-submit::after {
+        right: -15px;
+        bottom: -15px;
+        border-width: 0 3px 3px 0; }
+      footer .contact-footer .btn-submit:hover::after, footer .contact-footer .btn-submit:hover::before {
+        width: calc(100% + 27px);
+        height: calc(100% + 27px); }
+  footer .footer-media {
+    width: 100%;
+    margin-top: 45px;
+    background-color: #131313;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    footer .footer-media .logo-footer {
+      width: 100px; }
+      footer .footer-media .logo-footer img {
+        width: 100%; }
+
+.footer-fixed {
+  position: relative;
+  bottom: 0; }
+
+main .product {
+  position: relative;
+  width: 350px;
+  margin: 0 60px; }
+  main .product img {
+    width: 100%; }
+  main .product .product-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    border-radius: 4px;
+    cursor: pointer; }
+    main .product .product-details:hover {
+      opacity: 1; }
+    main .product .product-details .btn {
+      width: 160px;
+      height: 50px;
+      cursor: pointer;
+      font-size: 26px;
+      position: relative;
+      display: block;
+      margin-top: 15px; }
+      main .product .product-details .btn .text1, main .product .product-details .btn .text2 {
+        border-radius: 6px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: 50% 50% -25px;
+        transition: all .3s; }
+      main .product .product-details .btn .text1 {
+        transform: rotateX(0deg);
+        background-color: #292929;
+        color: #ffff; }
+      main .product .product-details .btn .text2 {
+        transform: rotateX(90deg);
+        background-color: #eee;
+        color: #131313; }
+        main .product .product-details .btn .text2 i {
+          color: #131313;
+          width: 45px;
+          height: 45px; }
+    main .product .product-details .btn:hover .text1 {
+      transform: rotateX(-90deg); }
+    main .product .product-details .btn:hover .text2 {
+      transform: rotateX(0deg); }
+main .lastest-products-main {
+  width: 100%; }
+  main .lastest-products-main h3 {
+    font-size: 64px;
+    text-align: center; }
+  main .lastest-products-main .slideshow {
+    margin: 50px auto;
+    width: 80%; }
+    main .lastest-products-main .slideshow .slick-next::before, main .lastest-products-main .slideshow .slick-prev::before {
+      background-color: #131313;
+      border-radius: 50%; }
+main .more-products h3 {
+  font-size: 48px;
+  margin-left: 25px;
+  text-decoration: underline; }
+main .more-products .products-main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  margin: 0 auto;
+  width: 85%; }
+  main .more-products .products-main .product {
+    width: 300px;
+    margin: 5px 15px;
+    text-align: center; }
+    main .more-products .products-main .product img {
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
+
+.table-cart {
+  width: 80%;
+  margin: 40px auto; }
+  .table-cart .tittle-table {
+    display: flex;
+    justify-content: space-between; }
+    .table-cart .tittle-table button {
+      background-color: transparent;
+      border: none;
+      color: #f54242;
+      cursor: pointer;
+      width: 50px;
+      height: 50px; }
+      .table-cart .tittle-table button:hover {
+        border-radius: 100%;
+        color: #eee;
+        background-color: #f54242; }
+  .table-cart table {
+    margin-top: 25px;
+    margin: 0 auto; }
+    .table-cart table tbody {
+      text-align: center; }
+      .table-cart table tbody tr {
+        border-bottom: 1px solid #131313; }
+        .table-cart table tbody tr td {
+          width: 150px; }
+        .table-cart table tbody tr .product-pic {
+          width: 350px; }
+          .table-cart table tbody tr .product-pic img {
+            width: 150px;
+            display: flex;
+            margin: 0 auto; }
+    .table-cart table .delete {
+      background-color: transparent;
+      border: none;
+      color: #f54242;
+      width: 50px;
+      height: 50px;
+      cursor: pointer; }
+      .table-cart table .delete:hover {
+        border-radius: 100%;
+        color: #eee;
+        background-color: #f54242; }
+
+.subtotal {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+  .subtotal .checkoutBtn {
+    background-color: transparent;
+    border: 1px solid #131313;
+    color: #131313;
+    font-size: 16px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: .3s all; }
+    .subtotal .checkoutBtn:hover {
+      color: #eee;
+      background-color: #131313; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Bebas Neue", Arial;
+  font-size: 26px;
+  overflow-x: hidden;
+  margin: 0 auto;
+  max-width: 100%; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+.hidden {
+  display: none; }
+
+.visible {
+  display: block; }
+
+/*# sourceMappingURL=main.css.map */
