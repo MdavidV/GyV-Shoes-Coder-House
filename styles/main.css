@@ -29,7 +29,7 @@ header {
     background-repeat: no-repeat;
     height: 853px;
     color: #ffff;
-    margin-top: -39px;
+    /* margin-top: -39px; */
     text-align: left; }
     header .header-main .text-header-main {
       position: relative;
