@@ -5,7 +5,7 @@ const BBDD = [
     id: 1,
     position: "p1",
     nombre: "Tenis Trainver V",
-    img: "assets/1.png",
+    img: "./assets/1.png",
     precio: 120,
     cantidad: 1,
   },
@@ -13,7 +13,7 @@ const BBDD = [
     id: 2,
     position: "p2",
     nombre: "Tenis Galaxy 5",
-    img: "assets/2.png",
+    img: "./assets/2.png",
     precio: 90,
     cantidad: 1,
   },
@@ -21,7 +21,7 @@ const BBDD = [
     id: 3,
     position: "p3",
     nombre: "Tenis Galaxar Run",
-    img: "assets/3.png",
+    img: "./assets/3.png",
     precio: 100,
     cantidad: 1,
   },
@@ -29,7 +29,7 @@ const BBDD = [
     id: 4,
     position: "p4",
     nombre: "Tenis ZX 2K Boost 2.0",
-    img: "assets/4.png",
+    img: "./assets/4.png",
     precio: 200,
     cantidad: 1,
   },
@@ -37,7 +37,7 @@ const BBDD = [
     id: 5,
     position: "p5",
     nombre: "Tenis Run Falcon 2.0",
-    img: "assets/5.png",
+    img: "./assets/5.png",
     precio: 120,
     cantidad: 1,
   },
@@ -45,7 +45,7 @@ const BBDD = [
     id: 6,
     position: "p6",
     nombre: "Tenis Asweetrain",
-    img: "assets/6.jpg",
+    img: "./assets/6.jpg",
     precio: 90,
     cantidad: 1,
   },
@@ -53,7 +53,7 @@ const BBDD = [
     id: 7,
     position: "p7",
     nombre: "Tenis Continental 80 Stripes",
-    img: "assets/7.jpg",
+    img: "./assets/7.jpg",
     precio: 100,
     cantidad: 1,
   },
@@ -61,7 +61,7 @@ const BBDD = [
     id: 8,
     position: "p8",
     nombre: "Tenis Runfalcon",
-    img: "assets/8.jpg",
+    img: "./assets/8.jpg",
     precio: 100,
     cantidad: 1,
   },
@@ -202,11 +202,14 @@ const openCart = () => {
   const mainView = document.querySelector("#mainView");
   const footerView = document.querySelector("#footerView");
   const cartView = document.querySelector("#cart");
+  const footerFixed = document.querySelector(".footer-media");
+
 
   headerView.classList.add("hidden");
   mainView.classList.add("hidden");
   mainViewL.classList.add("hidden");
   footerView.classList.add("hidden");
+  footerFixed.classList.add("footer-fixed");
   cartView.classList.remove("hidden");
   cartView.classList.add("visible");
 };
@@ -217,11 +220,13 @@ const closeCart = () => {
   const mainView = document.querySelector("#mainView");
   const footerView = document.querySelector("#footerView");
   const cartView = document.querySelector("#cart");
+  const footerFixed = document.querySelector(".footer-media");
 
   headerView.classList.remove("hidden");
   mainView.classList.remove("hidden");
   mainViewL.classList.remove("hidden");
   footerView.classList.remove("hidden");
+  footerFixed.classList.remove("footer-fixed");
   cartView.classList.remove("visible");
   cartView.classList.add("hidden");
 };

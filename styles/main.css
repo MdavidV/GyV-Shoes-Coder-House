@@ -23,7 +23,7 @@ header {
         width: 100%;
         cursor: pointer; }
   header .header-main {
-    background-image: url("../../assets/bg.png");
+    background-image: url("../assets/bg.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -133,7 +133,7 @@ footer {
         width: 100%; }
 
 .footer-fixed {
-  position: relative;
+  position: absolute;
   bottom: 0; }
 
 main .product {
