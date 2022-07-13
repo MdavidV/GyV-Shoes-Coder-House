@@ -132,9 +132,9 @@ footer {
       footer .footer-media .logo-footer img {
         width: 100%; }
 
-.footer-fixed {
+/* .footer-fixed {
   position: absolute;
-  bottom: 0; }
+  bottom: 0; } */
 
 main .product {
   position: relative;

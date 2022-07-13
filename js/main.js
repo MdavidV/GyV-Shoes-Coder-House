@@ -1,101 +1,42 @@
 "use strict";
 
-const BBDD = [
-  {
-    id: 1,
-    position: "p1",
-    nombre: "Tenis Trainver V",
-    img: "./assets/1.png",
-    precio: 120,
-    cantidad: 1,
-  },
-  {
-    id: 2,
-    position: "p2",
-    nombre: "Tenis Galaxy 5",
-    img: "./assets/2.png",
-    precio: 90,
-    cantidad: 1,
-  },
-  {
-    id: 3,
-    position: "p3",
-    nombre: "Tenis Galaxar Run",
-    img: "./assets/3.png",
-    precio: 100,
-    cantidad: 1,
-  },
-  {
-    id: 4,
-    position: "p4",
-    nombre: "Tenis ZX 2K Boost 2.0",
-    img: "./assets/4.png",
-    precio: 200,
-    cantidad: 1,
-  },
-  {
-    id: 5,
-    position: "p5",
-    nombre: "Tenis Run Falcon 2.0",
-    img: "./assets/5.png",
-    precio: 120,
-    cantidad: 1,
-  },
-  {
-    id: 6,
-    position: "p6",
-    nombre: "Tenis Asweetrain",
-    img: "./assets/6.jpg",
-    precio: 90,
-    cantidad: 1,
-  },
-  {
-    id: 7,
-    position: "p7",
-    nombre: "Tenis Continental 80 Stripes",
-    img: "./assets/7.jpg",
-    precio: 100,
-    cantidad: 1,
-  },
-  {
-    id: 8,
-    position: "p8",
-    nombre: "Tenis Runfalcon",
-    img: "./assets/8.jpg",
-    precio: 100,
-    cantidad: 1,
-  },
-];
-
 const cartContainer = document.querySelector("#cartContainer");
 const cartOpener = document.querySelector("#cartIcon");
 const cartCloser = document.querySelector(".closer");
 const totalPrice = document.querySelector("#totalPrice");
 
-const renderProducts = () => {
-  const container = document.querySelector(".products-main");
+// RENDERIZAR PRODUCTOS TRAIDOS DEL JSON
 
-  BBDD.forEach((product) => {
-    let productHTML = `
+const container = document.querySelector(".products-main");
 
-    <div class="product">
-      <img src="${product.img}" />
-      <div class="product-details">
-        <h2 class="product-name">${product.nombre}</h2>
+let BBDD = [];
 
-      <a class="btn" onclick="addToCart(${product.id})">
-        <span class="text1">${product.precio}$</span>
-        <span class="text2">
-          Add to Cart
-          <i class="fa-solid fa-cart-arrow-up"></i>
-        </span>
-      </a>
+fetch("js/stock.json")
+  .then((res) => res.json())
+  .then((data) => {
+    BBDD = data;
+
+    BBDD.forEach((product) => {
+      let productHTML = `
+
+      <div class="product">
+        <img src="${product.img}" />
+        <div class="product-details">
+          <h2 class="product-name">${product.nombre}</h2>
+  
+        <a class="btn" onclick="addToCart(${product.id})">
+          <span class="text1">${product.precio}$</span>
+          <span class="text2">
+            Add to Cart
+            <i class="fa-solid fa-cart-arrow-up"></i>
+          </span>
+        </a>
+      </div>
     </div>
-  </div>
-    `;
-    container.innerHTML += productHTML;
+      `;
+      container.innerHTML += productHTML;
+    });
   });
-};
 
 $(".slideshow").slick({
   dots: true,
@@ -174,7 +115,6 @@ const renderTotal = () => {
 
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-
 const addToCart = (id) => {
   let product = BBDD.find((item) => item.id === id);
   cart.push(product);
@@ -204,7 +144,6 @@ const openCart = () => {
   const cartView = document.querySelector("#cart");
   const footerFixed = document.querySelector(".footer-media");
 
-
   headerView.classList.add("hidden");
   mainView.classList.add("hidden");
   mainViewL.classList.add("hidden");
@@ -231,12 +170,9 @@ const closeCart = () => {
   cartView.classList.add("hidden");
 };
 
-
-
 cartOpener.addEventListener("click", openCart);
 cartCloser.addEventListener("click", closeCart);
 
-renderProducts();
 
 
 window.onload(renderCart(), renderTotal());

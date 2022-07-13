@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "position": "p1",
+    "nombre": "Tenis Trainver V",
+    "img": "./assets/1.png",
+    "precio": 120,
+    "cantidad": 1
+  },
+  {
+    "id": 2,
+    "position": "p2",
+    "nombre": "Tenis Galaxy 5",
+    "img": "./assets/2.png",
+    "precio": 90,
+    "cantidad": 1
+  },
+  {
+    "id": 3,
+    "position": "p3",
+    "nombre": "Tenis Galaxar Run",
+    "img": "./assets/3.png",
+    "precio": 100,
+    "cantidad": 1
+  },
+  {
+    "id": 4,
+    "position": "p4",
+    "nombre": "Tenis ZX 2K Boost 2.0",
+    "img": "./assets/4.png",
+    "precio": 200,
+    "cantidad": 1
+  },
+  {
+    "id": 5,
+    "position": "p5",
+    "nombre": "Tenis Run Falcon 2.0",
+    "img": "./assets/5.png",
+    "precio": 120,
+    "cantidad": 1
+  },
+  {
+    "id": 6,
+    "position": "p6",
+    "nombre": "Tenis Asweetrain",
+    "img": "./assets/6.jpg",
+    "precio": 90,
+    "cantidad": 1
+  },
+  {
+    "id": 7,
+    "position": "p7",
+    "nombre": "Tenis Continental 80 Stripes",
+    "img": "./assets/7.jpg",
+    "precio": 100,
+    "cantidad": 1
+  },
+  {
+    "id": 8,
+    "position": "p8",
+    "nombre": "Tenis Runfalcon",
+    "img": "./assets/8.jpg",
+    "precio": 100,
+    "cantidad": 1
+  }
+]
