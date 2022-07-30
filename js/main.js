@@ -5,11 +5,17 @@ const cartOpener = document.querySelector("#cartIcon");
 const cartCloser = document.querySelector(".closer");
 const totalPrice = document.querySelector("#totalPrice");
 
+
+// FUNCION REDUCER
+
+const reducer = (accumulator, curr) => accumulator + curr;
+
 // RENDERIZAR PRODUCTOS TRAIDOS DEL JSON
 
 const container = document.querySelector(".products-main");
 
 let BBDD = [];
+let totalPrices = [];
 
 fetch("js/stock.json")
   .then((res) => res.json())
@@ -79,15 +85,12 @@ const renderCart = () => {
   <td class="product-price">${item.precio}$</td>
   <td class="product-quantity">
 
-    <select name="select" id="selectQuantity">
+  <p>${item.cantidad}</p>
 
-     
-      <option value="Value1" selected>1</option>
-      <option value="Value2" >2</option>
-      <option value="Value3" >3</option>
-        
-    </select>
+  </td>
 
+  <td id="subtotalCart">
+    
   </td>
 
   <td class="deleteCart">
@@ -103,24 +106,53 @@ const renderCart = () => {
   });
 };
 
+
+
+
 const renderTotal = () => {
-  let total = 0;
 
-  cart.forEach((product) => {
-    total += product.precio;
-  });
 
-  totalPrice.innerText = total;
+
+  cart.forEach((e) => {
+    let price = e.cantidad * e.precio
+    e.precio = price;
+
+    totalPrices.push(price);
+  })
+  
+
+
+  // let total = totalPrices.reduce(reducer);
+
+  // totalPrice.innerText = total;
 };
+
 
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+const subtotalPrice = document.querySelector("#subtotalCart");
+
 const addToCart = (id) => {
+
+
+  let prices = [];
+
   let product = BBDD.find((item) => item.id === id);
-  cart.push(product);
+  
 
-  localStorage.setItem("cart", JSON.stringify(cart));
+  let productInCart =  cart.find((item) => item.id === id);
 
+
+
+
+  if(productInCart){
+    productInCart.cantidad++;
+  } else{
+    product.cantidad=1;
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+  
   renderCart();
   renderTotal();
 };
