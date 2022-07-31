@@ -15,7 +15,6 @@ const reducer = (accumulator, curr) => accumulator + curr;
 const container = document.querySelector(".products-main");
 
 let BBDD = [];
-let totalPrices = [];
 
 fetch("js/stock.json")
   .then((res) => res.json())
@@ -72,9 +71,12 @@ $(".slideshow").slick({
 });
 
 const renderCart = () => {
+  let total = 0;
   cartContainer.innerHTML = "";
 
   cart.forEach((item) => {
+    let precio = item.cantidad * item.precio;
+
     const div = document.createElement("tr");
     div.classList.add("cart-item");
 
@@ -90,7 +92,7 @@ const renderCart = () => {
   </td>
 
   <td id="subtotalCart">
-    
+    ${precio} $
   </td>
 
   <td class="deleteCart">
@@ -103,29 +105,15 @@ const renderCart = () => {
     `;
 
     cartContainer.append(div);
+
+    
+    total += precio;
   });
+
+  totalPrice.innerText = total + '$';
 };
 
 
-
-
-const renderTotal = () => {
-
-
-
-  cart.forEach((e) => {
-    let price = e.cantidad * e.precio
-    e.precio = price;
-
-    totalPrices.push(price);
-  })
-  
-
-
-  // let total = totalPrices.reduce(reducer);
-
-  // totalPrice.innerText = total;
-};
 
 
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -154,7 +142,6 @@ const addToCart = (id) => {
   }
   
   renderCart();
-  renderTotal();
 };
 
 const removeCart = (id) => {
@@ -165,7 +152,6 @@ const removeCart = (id) => {
   localStorage.setItem("cart", JSON.stringify(cart));
 
   renderCart();
-  renderTotal();
 };
 
 const openCart = () => {
@@ -207,4 +193,4 @@ cartCloser.addEventListener("click", closeCart);
 
 
 
-window.onload(renderCart(), renderTotal());
+window.onload(renderCart());
